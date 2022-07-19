@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-createSlice({
+const cartSlice =createSlice({
     name:'cart',
     initialState:{
         items:[],
@@ -42,3 +42,5 @@ createSlice({
        }
     }
 });
+export const cartActions =cartSlice.actions;
+export default cartSlice;
