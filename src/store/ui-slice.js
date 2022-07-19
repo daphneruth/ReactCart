@@ -9,4 +9,6 @@ import {createSlice} from '@reduxjs/toolkit';
         }
     }
 });
+export const uiActions = createSlice.actions ;
+
 export default uiSlice;
