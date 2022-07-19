@@ -1,14 +1,18 @@
-import Cart from './components/Cart/Cart';
-import Layout from './components/Layout/Layout';
-import Products from './components/Shop/Products';
+     import { useSelector } from 'react-redux';
 
-function App() {
-  return (
-    <Layout>
-      <Cart />
-      <Products />
-    </Layout>
-  );
-}
+     import Cart from './components/Cart/Cart';
+      import Layout from './components/Layout/Layout';
+      import Products from './components/Shop/Products';
+     // import uiSlice from './store/ui-slice';
 
-export default App;
+      function App() {
+        const showCart = useSelector((state) =>state.ui.cartVisible)
+        return (
+          <Layout>
+            {showCart && <Cart />}
+            <Products />
+          </Layout>
+        );
+      }
+
+      export default App;

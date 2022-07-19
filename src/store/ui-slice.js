@@ -5,7 +5,7 @@ import {createSlice} from '@reduxjs/toolkit';
     initialState:{cartVisible : false},
     reducers: {
         toggle(state){
-            state.cartVisible = !state.cartVisible;
+            state.cartVisible =!state.cartVisible;
         }
     }
 });
