@@ -20,6 +20,8 @@ createSlice({
                 title:newItem.title
             }) 
         } else {
+            existingItem.quantity++;
+            existingItem.totalPrice = existingItem.totalPrice + newItem.price;
 
             }
         
