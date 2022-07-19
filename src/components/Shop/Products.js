@@ -23,11 +23,12 @@ const Products = (props) => {
     <section className={classes.products}>
       <h2>Buy your favorite products</h2>
       <ul>
+        {BOOK_PRODUCTS.map((products)=>(
         <ProductItem
           title='Test'
           price={6}
           description='This is a first product - amazing!'
-        />
+        />))}
       </ul>
     </section>
   );
