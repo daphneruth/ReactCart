@@ -10,13 +10,14 @@
 
     const toggleHandler =()=>{
       dispatch(uiActions.toggle());
+      const cartQuantity =useSelector((state)=>state.cart.totalQuantity)
 
     }
   
     return (
       <button className={classes.button} onClick={toggleHandler}> 
         <span>My Cart</span>
-        <span className={classes.badge}>1</span>
+        <span className={classes.badge}>1{cartQuantity}</span>
       </button>
     );
   };
